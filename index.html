@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    
+
+    <meta name="description" content="Portfolio website">
     <meta name="author" content="Prof. Anjali Giri">
     <meta name="robots" content="index, follow">
 
@@ -519,67 +519,55 @@ h3 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Lightbox */
+/* Responsive layout */
 
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
+/* Tablet */
+@media (max-width: 992px){
+  section{
+    padding:40px 20px;
+  }
 }
 
-#lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
+/* Mobile */
+@media (max-width: 768px){
+
+  nav{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .hero h2{
+    font-size:1.1rem;
+  }
+
+  .projects-container,
+  .skills-container{
+    grid-template-columns:1fr;
+  }
+
 }
 
-/* TABLET */
+/* Small phone */
+@media (max-width:480px){
 
-@media (max-width:1024px) {
-    
-    .hero-left h1 {
-        font-size: 3rem;
-    }
-    
-    .hero-left h2 {
-        font-size: 1.6rem;
-    }
-    
-    .hero-right .image-container {
-        width: 320px;
-        height: 380px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-}
+  h1{
+    font-size:1.6rem;
+  }
 
-/* LARGE SCREENS */
+  h2{
+    font-size:1rem;
+  }
 
-@media (min-width:1400px) {
-    
-    nav {
-        max-width: 1400px;
-    }
-    
-    section {
-        max-width: 1400px;
-    }
-    
-    .hero-left h1 {
-        font-size: 5rem;
-    }
-    
-}
+  section{
+    padding:30px 15px;
+  }
+
+        }
 
     </style>
 </head>
